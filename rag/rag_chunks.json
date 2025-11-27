@@ -1,0 +1,431 @@
+[
+  {
+    "id": "CHUNK_01_DistrictOverview_Ropar",
+    "title": "District Overview: Ropar (Rupnagar)",
+    "text": "Rupnagar (Ropar) lies in the Shivalik foothills and Shivalik belt. The main soil groups in this region include: Kandi soils (eroded, coarse-textured, low fertility, low moisture retention), Forest/ Shivalik soils (sandy-loam to loamy, moderate organic matter, suitable for horticulture and agroforestry), and Floodplain/Bet soils along river banks (deep alluvial soils, fertile, better moisture retention). Floodplain (Bet) soils along rivers like Sutlej are among Punjab’s most fertile alluvial lands. In Punjab, alluvial soils formed by river deposition are dominant across large parts of the state. :contentReference[oaicite:0]{index=0}",
+    "soil_tags": ["Kandi","Forest","Floodplain","Alluvial"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "Punjab_Soil_Classification_Study + AgroSense_Summary"
+  },
+  {
+    "id": "CHUNK_02_RequiredInputsForChatbot",
+    "title": "Required Soil & Season Inputs from Farmer",
+    "text": "To give a reliable recommendation, AgroSense must ask the user for the following inputs: Soil Type (e.g. Kandi / Forest / Floodplain / Sandy / Loamy / Clay / Red / Black), Moisture Level (Low / Medium / High), Organic Content / Soil Humus Level (Poor / Average / Good), NPK values: Nitrogen (N), Phosphorus (P), Potassium (K) — numeric or categorical (Low/Medium/High), Season (Kharif / Rabi / Summer), and optionally current temperature. These parameters collectively drive the crop choice, fertilizer advice and care tips logic.",
+    "soil_tags": [],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "AgroSense_Design_Spec"
+  },
+  {
+    "id": "CHUNK_03_CropSuitability_KandiSoils",
+    "title": "Crop Suitability: Kandi Soils (Ropar)",
+    "text": "Kandi soils in Ropar are characterised by low fertility, poor moisture retention, sandy / gravelly texture, and are badly eroded — suitable for dryland farming rather than water-intensive crops. Suitable crops on Kandi soils: Maize, Moong (green gram), Arhar (pigeon pea), Groundnut, Millets (e.g. Bajra), Mustard, Gram (chickpea), Fodder crops like Sorghum and Berseem, and Agroforestry species like Poplar or Eucalyptus. These crops tolerate moisture stress and poor soil fertility. Water-intensive crops like paddy should be avoided on Kandi soils.",
+    "soil_tags": ["Kandi"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Maize","Moong","Arhar","Groundnut","Bajra","Mustard","Gram","Sorghum","Berseem","Poplar","Eucalyptus"],
+    "source": "AgroSense_Summary"
+  },
+  {
+    "id": "CHUNK_04_CropSuitability_ForestSoils",
+    "title": "Crop Suitability: Forest / Shivalik Soils (Ropar)",
+    "text": "Forest / Shivalik soils in the foothill belt — moderately shallow to loamy soils with better organic matter compared to Kandi soils. These soils suit horticulture (fruits, vegetables), agroforestry and tree crops. Suitable crops: Fruits such as Guava, Kinnow, Amla, Mango; Vegetables like Tomato, Onion, Garlic, Capsicum; Spices/Herbs like Turmeric and Ginger; Agroforestry species including Poplar, Bamboo, Eucalyptus. These soils perform poorly with water-intensive crops and cropping requiring deep alluvial soils.",
+    "soil_tags": ["Forest","Shivalik"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Guava","Kinnow","Amla","Mango","Tomato","Onion","Garlic","Capsicum","Turmeric","Ginger","Poplar","Bamboo","Eucalyptus"],
+    "source": "AgroSense_Summary"
+  },
+  {
+    "id": "CHUNK_05_CropSuitability_FloodplainSoils",
+    "title": "Crop Suitability: Floodplain / Bet / Alluvial Soils (Ropar)",
+    "text": "Floodplain (Bet) or alluvial soils along rivers (e.g. Sutlej) in Ropar district are deep, fertile, with good moisture availability — ideal for nutrient- and water-demanding crops. Suitable crops: Wheat (Rabi), Paddy / Basmati (Kharif), Sugarcane (where drainage permits), vegetables such as Potato, Onion, Tomato, Peas, and fodder crops like maize fodder or Berseem. Dryland crops (millets) are less preferred here unless moisture becomes low. Alluvial soils in Punjab are known to be fertile and widely distributed across the plains. :contentReference[oaicite:1]{index=1}",
+    "soil_tags": ["Floodplain","Bet","Alluvial"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Wheat","Paddy","Sugarcane","Potato","Onion","Tomato","Peas","MaizeFodder","Berseem"],
+    "source": "Punjab Soil Data + AgroSense_Summary"
+  },
+  {
+    "id": "CHUNK_06_FertilizerLogic_Nitrogen",
+    "title": "Fertilizer & Soil Improvement Logic: Nitrogen (N)",
+    "text": "If soil test or farmer indicates Nitrogen (N) is Low: Recommend application of nitrogen-rich fertilizers such as Urea or Ammonium Sulphate. Additionally, if organic matter is low, use well-decomposed farmyard manure (FYM) or compost to improve nitrogen availability and soil health — especially important for eroded / poor soils like Kandi. Use of organic matter also helps maintain sustainable fertility. Green manuring and compost improve soil structure and nitrogen cycling. :contentReference[oaicite:2]{index=2}",
+    "soil_tags": [],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "AgroSense_Nutrient_Logic"
+  },
+  {
+    "id": "CHUNK_07_FertilizerLogic_Phosphorus",
+    "title": "Fertilizer & Soil Improvement Logic: Phosphorus (P)",
+    "text": "If Phosphorus (P) in soil is Low: Recommend adding Phosphorus via DAP (Di-Ammonium Phosphate) or SSP (Single Super Phosphate). Phosphorus is critical for root development, early crop growth and productivity, especially for maize, pulses, oilseeds and vegetables.",
+    "soil_tags": [],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "AgroSense_Nutrient_Logic"
+  },
+  {
+    "id": "CHUNK_08_FertilizerLogic_Potassium",
+    "title": "Fertilizer & Soil Improvement Logic: Potassium (K)",
+    "text": "If Potassium (K) is Low: Recommend application of Potassium fertilizer such as Muriate of Potash (MOP). Potassium is especially important for fruit crops, vegetables and fodder to ensure good yield, quality, and stress resistance.",
+    "soil_tags": [],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "AgroSense_Nutrient_Logic"
+  },
+  {
+    "id": "CHUNK_09_OrganicMatter_GreenManure",
+    "title": "Soil Improvement: Organic Matter & Green Manuring",
+    "text": "If soil shows low organic content (Poor humus / compost), apply 4–6 tons per acre of well-decomposed FYM (farmyard manure) or compost. Additionally use green manure crops such as Dhaincha (Sesbania aculeata) to restore organic matter, improve soil structure, water-holding capacity, and reduce erosion — especially in degraded or eroded soils like Kandi soils. Green-manuring legumes also help fix atmospheric nitrogen, improving fertility for subsequent crops. Benefits of Dhaincha and other green manure crops in improving soil fertility, structure, moisture retention and reducing weed pressure are well documented. :contentReference[oaicite:3]{index=3}",
+    "soil_tags": [],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Dhaincha","GreenManure"],
+    "source": "Green_Manure_Research + AgroSense_Design"
+  },
+  {
+    "id": "CHUNK_10_MicronutrientGuidance",
+    "title": "Micronutrient Guidance (Zn, Mn, etc.)",
+    "text": "Punjab and alluvial soils may exhibit micronutrient deficiency (e.g. Zinc, Manganese) when intensive cropping and irrigation alter soil chemistry. Where deficiency symptoms or soil test indicates, application of appropriate micronutrient fertilizers (e.g. Zinc Sulphate) is advised — especially for vegetables and fruit crops where yield and quality are impacted. Soil testing is recommended to confirm micronutrient status before applying. Relevant soil-fertility studies in Punjab show trends of changes over time under intensive cropping; hence balanced fertilization including micronutrients helps maintain soil health. :contentReference[oaicite:4]{index=4}",
+    "soil_tags": [],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "Punjab_Soil_Studies + AgroSense_Design"
+  },
+  {
+    "id": "CHUNK_11_CropCare_Maize_Kharif",
+    "title": "Crop Care: Maize (Ideal for Kandi Soils)",
+    "text": "Maize crop on suitable soils (especially Kandi / low-moisture soils) — sowing in mid-June to July (Kharif), spacing 60 × 20 cm, requires about 3–4 critical irrigations (especially at vegetative and flowering stages), apply recommended fertilizer doses (N, P, K), and perform early weed control. On poor soils add FYM and, if needed, organic mulch to conserve moisture.",
+    "soil_tags": ["Kandi"],
+    "season_tags": ["Kharif"],
+    "crop_tags": ["Maize"],
+    "source": "AgroSense_Crop_Care"
+  },
+  {
+    "id": "CHUNK_12_CropCare_Pulses_Moong_Arhar",
+    "title": "Crop Care: Pulses (Moong / Arhar) on Dry Soils",
+    "text": "Moong and Arhar are suitable for moisture-deficit soils. They require minimal fertilizer (small dose of P at sowing), enrich the soil by fixing atmospheric nitrogen (especially if following green manure), and need little water compared to cereals — making them good for dryland / Kandi soils in Kharif or Summer. Leguminous crops also improve soil nitrogen for subsequent crops. :contentReference[oaicite:5]{index=5}",
+    "soil_tags": ["Kandi","Sandy","Dryland"],
+    "season_tags": ["Kharif","Summer"],
+    "crop_tags": ["Moong","Arhar","Pulses"],
+    "source": "AgroSense_Crop_Care + Green Manure Theory"
+  },
+  {
+    "id": "CHUNK_13_CropCare_Wheat_Floodplain",
+    "title": "Crop Care: Wheat on Floodplain / Alluvial Soils",
+    "text": "Wheat sown in mid-November to December in fertile floodplain/alluvial soils: requires 4–5 irrigations across the growing season; nitrogen to be applied in 2-3 splits; phosphorus at sowing. Good soil moisture and fertility improve yield. Alluvial soils in Punjab — formed by river deposits — are fertile and suitable for cereals such as wheat and rice. :contentReference[oaicite:6]{index=6}",
+    "soil_tags": ["Floodplain","Alluvial"],
+    "season_tags": ["Rabi"],
+    "crop_tags": ["Wheat"],
+    "source": "Punjab Soil Data + AgroSense_Crop_Care"
+  },
+  {
+    "id": "CHUNK_14_CropCare_Vegetables_Forest_Floodplain",
+    "title": "Crop Care: Vegetables on Forest & Floodplain Soils",
+    "text": "Vegetables (Tomato, Onion, Garlic, Capsicum, etc.) on fertile forest or floodplain/alluvial soils — require medium to high organic matter, regular moisture, good drainage, periodic micronutrient supply (e.g. zinc/boron), and timely irrigation. Proper soil preparation and compost/FYM before sowing improves yield and quality. Soil texture and fertility in alluvial zones support intensive vegetable cultivation. :contentReference[oaicite:7]{index=7}",
+    "soil_tags": ["Forest","Floodplain","Alluvial","Loamy"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Tomato","Onion","Garlic","Capsicum","Vegetables"],
+    "source": "PAU Veg Package + Punjab Soil Data"
+  },
+  {
+    "id": "CHUNK_15_CropCare_Orchards_Forest",
+    "title": "Crop Care: Fruit Trees / Orchards (e.g. Kinnow, Guava) on Forest Soils",
+    "text": "For orchard crops like Kinnow and Guava on well-drained forest / Shivalik soils: planting best in July–September, annual FYM application recommended, drip irrigation preferred for water efficiency and controlled moisture, good soil drainage is essential. Hilly or foothill soils with loamy texture and moderate organic matter favour orchard crops rather than heavy alluvial soils. :contentReference[oaicite:8]{index=8}",
+    "soil_tags": ["Forest","Shivalik"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Kinnow","Guava","Mango","FruitTrees"],
+    "source": "Soil Texture Data + AgroSense_Crop_Care"
+  },
+  {
+    "id": "CHUNK_16_SeasonLogic_Kharif",
+    "title": "Season Logic: Kharif Crops",
+    "text": "In the Kharif season (monsoon / summer): on Ropar soils best-suited crops include maize, pulses (moong, groundnut), millets, and summer vegetables — especially on light / dry soils (Kandi, sandy) or medium soils (loamy / forest soils). On fertile alluvial soils, paddy or water-demanding crops may be considered if moisture is sufficient. Alluvial plains support high-yielding cereals and paddy under adequate irrigation infrastructure. :contentReference[oaicite:9]{index=9}",
+    "soil_tags": [],
+    "season_tags": ["Kharif"],
+    "crop_tags": ["Maize","Moong","Groundnut","Millets","Vegetables","Paddy"],
+    "source": "Punjab Soil Data + AgroSense_Season_Logic"
+  },
+  {
+    "id": "CHUNK_17_SeasonLogic_Rabi",
+    "title": "Season Logic: Rabi Crops",
+    "text": "In Rabi season (winter): fertile soils (floodplain / alluvial) support wheat, mustard, gram, pea, and winter vegetables (cauliflower, carrot, etc.). On lighter soils (with irrigation), pulses and legumes may also be considered if water and fertility permit. Wheat-based cropping dominates Punjab due to favourable alluvial soils covering large area. :contentReference[oaicite:10]{index=10}",
+    "soil_tags": [],
+    "season_tags": ["Rabi"],
+    "crop_tags": ["Wheat","Mustard","Gram","Pea","Vegetables"],
+    "source": "Punjab Soil Data + AgroSense_Season_Logic"
+  },
+  {
+    "id": "CHUNK_18_SeasonLogic_Summer",
+    "title": "Season Logic: Summer Crops",
+    "text": "During Summer: if irrigation or moisture is available, suitable options include summer-moong (dry-season pulses), fodder maize, and vegetables. On dry soils, consider drought-tolerant crops like pulses or millets. Green-manuring crops like Dhaincha or Sunn hemp can also be grown to restore fertility during fallow periods. :contentReference[oaicite:11]{index=11}",
+    "soil_tags": [],
+    "season_tags": ["Summer"],
+    "crop_tags": ["Moong","FodderMaize","Vegetables","Millets","GreenManure"],
+    "source": "Green Manure & Crop Logic"
+  },
+  {
+    "id": "CHUNK_19_MoistureLogic",
+    "title": "Moisture-Level Based Crop Logic",
+    "text": "When soil moisture is Low: recommend pulses, millets, groundnut; increase organic matter, use mulching or drip/sprinkler irrigation to conserve moisture. When moisture is Medium: maize, mustard, vegetables. When moisture is High and soil fertile (floodplain/alluvial): paddy, sugarcane and other water-demanding crops may be considered — but only if drainage is good. Alluvial soils with deep profile and irrigation support intensive cropping under high moisture. :contentReference[oaicite:12]{index=12}",
+    "soil_tags": [],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "Punjab Soil & Crop Logic"
+  },
+  {
+    "id": "CHUNK_20_ChatbotResponseStructure",
+    "title": "Chatbot Output Structure",
+    "text": "The chatbot (AgroSense) should output: first — Suitable Crops (top 2–4), then Fertilizer / Soil Improvement Recommendations, then Simple Care Tips (2–3 actionable points: irrigation schedule, weed control, moisture management etc.). Responses should be concise, farmer-friendly, and may use Hinglish (mix of Hindi + English) for clarity to rural users.",
+    "soil_tags": [],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "AgroSense_Design_Spec"
+  },
+  {
+    "id": "CHUNK_21_PolicyContext_Punjab",
+    "title": "Punjab Policy & Agroforestry Context",
+    "text": "Punjab agriculture policy encourages crop diversification away from water-intensive paddy, promoting maize, pulses, oilseeds, vegetables and agroforestry on degraded or low-water soils. Green manuring (e.g. Dhaincha / Sunn hemp) and organic composting are promoted to rebuild soil fertility and reduce chemical fertilizer dependence. Conservation-oriented practices such as residue-management, mulching, and micro-irrigation (drip/sprinkler) are encouraged for sustainable farming. Several expert articles highlight green manure crops’ role in improving soil structure, water-holding capacity and fertility under semi-arid conditions. :contentReference[oaicite:13]{index=13}",
+    "soil_tags": [],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "Punjab Agri-Policy + Green Manure Research"
+  },
+  {
+    "id": "CHUNK_22_SoilHealth_Caution_pH_Salinity_Alkalinity",
+    "title": "Soil Health Warning: pH, Salinity & Sodicity Risks in Punjab / Ropar Region",
+    "text": "Soils and groundwater in parts of Punjab — especially irrigated and water-logged zones — can suffer from salinity and sodicity, impacting crop yield. Salt-affected soils reduce productivity drastically; many common crops yield only 20–50% under high salinity stress. Therefore, before selecting crop or fertilizer, farmers should test soil pH and electrical conductivity (EC), and avoid water-intensive crops on salt-affected or sodic soils. Use salt-tolerant varieties or salt-resilient crops, gypsum as amendment, good drainage, proper irrigation scheduling, and periodic leaching of salts to maintain soil health. [source: CHUNK_22, research on Soil Salinity & Food Security, CSSRI guidelines]  ",
+    "soil_tags": ["Alluvial","Floodplain","Saline-prone","Irrigated"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "Soil Salinity & Sodicity Studies in Punjab / CSSRI Data + AgroSense_Caution"
+  },
+  {
+    "id": "CHUNK_23_CropRotation_Suggestions",
+    "title": "Crop Rotation & Diversification: Recommended Patterns for Soil Health",
+    "text": "To prevent nutrient depletion, soil fatigue and pest/disease build-up, crop rotation is advisable: e.g., alternate cereals (wheat / maize) with legumes (moong, gram, pulses) or oilseeds. For example, a rotation like Maize → Moong → Wheat or Maize → Mustard → Moong helps restore nitrogen, improve organic carbon, reduce pathogen load and maintain fertility. Repeated rice-wheat monoculture should be avoided — replacing rice with maize, pulses or oilseeds reduces water use, lowers salinity risk and improves soil organic carbon over time. [source: Punjab Crop-Diversification & Crop-Rotation Research]  ",
+    "soil_tags": ["Alluvial","Floodplain","Kandi","Loamy","Sandy"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Maize","Moong","Mustard","Wheat","Pulses","Oilseeds"],
+    "source": "Punjab Crop-Rotation Studies + AgroSense_Design"
+  },
+  {
+    "id": "CHUNK_24_PestDisease_Baseline_Cereals_Pulses",
+    "title": "Pest & Disease Baseline — Cereals and Pulses (Punjab Context)",
+    "text": "Major pests and diseases affecting cereals (wheat, maize) and pulses in Punjab include stem borers, aphids, root-rot, fungal diseases under waterlogging, and insect pests during sowing. Integrated pest management recommends crop-rotation, use of resistant / tolerant varieties, timely sowing, balanced fertilization and avoiding continuous monoculture. Use of border crops and non-host crop rotation reduces pest build-up. Pulse-wheat or maize-pulse rotations help break pest and disease cycles. [source: Pest Management Strategies in Pulses & Cereal Crops]  ",
+    "soil_tags": ["Alluvial","Kandi","Loamy"],
+    "season_tags": ["Kharif","Rabi"],
+    "crop_tags": ["Wheat","Maize","Pulses"],
+    "source": "Research on Pest Management in Cereals & Pulses"
+  },
+  {
+    "id": "CHUNK_25_PestDisease_Baseline_Vegetables_Orchards",
+    "title": "Pest & Disease Baseline — Vegetables and Orchards (Punjab Foothill / Alluvial Zones)",
+    "text": "Vegetables (tomato, onion, capsicum, potato) and fruit orchards (guava, kinnow) in Punjab are vulnerable to fungal diseases under improper moisture/drainage, pest infestations like aphids, whiteflies, soil-borne nematodes and nutrient-deficiency disorders. To reduce risk: ensure good drainage, avoid over-watering (especially in floodplain soils), apply balanced fertilizers, maintain organic matter, rotate with non-host crops, and inspect regularly. Drip irrigation and mulching help prevent water-logging and fungal outbreaks. Organic manure / compost helps build resistance and soil microbiome. [source: ICAR / Agro-advisory literature & Vegetable Package Recommendations]  ",
+    "soil_tags": ["Forest","Alluvial","Loamy"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Vegetables","Orchards","Tomato","Onion","Capsicum","Guava","Kinnow"],
+    "source": "PAU Vegetable Package + Pest-Disease Review"
+  },
+  {
+    "id": "CHUNK_26_Salinity_Management_Practices",
+    "title": "Soil & Water Management Practices to Combat Salinity / Sodicity",
+    "text": "In areas where irrigation water or groundwater is saline / sodic, farmers should adopt salt-management practices: use gypsum (calcium amendment), ensure good drainage, avoid over-irrigation, use salt-tolerant / drought-tolerant crops (millets, pulses, salt-tolerant legumes), apply organic matter to improve soil structure, use mulching / drip irrigation to limit salt build-up, and periodically leach salts with good quality water if available. Avoid repeated cultivation of water-intensive crops (paddy, sugarcane) in saline zones. Monitoring of soil EC / sodium adsorption ratio (SAR) before crop selection is strongly advised. [source: ICAR-CSSRI guidelines + general soil-salinity research]  ",
+    "soil_tags": ["Saline-prone","Irrigated","Floodplain","Alluvial"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Millets","Pulses","SaltTolerantCrops"],
+    "source": "CSSRI Salt-Soil Reclamation Research + AgroSense_Design"
+  },
+  {
+    "id": "CHUNK_27_CropDiversification_PolicyContext",
+    "title": "Crop Diversification & Sustainable Farming for Punjab — Policy & Research Context",
+    "text": "Due to degradation, salinity and over-extraction of groundwater under rice-wheat mono-culture, research recommends crop diversification: include maize, pulses, oilseeds, millets, legumes and agroforestry (trees) to reduce water demand, improve soil health and sustain fertility. Diversified cropping and rotations reduce risk of pests / diseases, soil salinity, nutrient mining and environmental stress. Mixed farming (crop + livestock) and inclusion of legumes improve soil nitrogen, organic carbon and long-term sustainability. [source: Punjab Agricultural Research & Diversification Reports] ",
+    "soil_tags": ["Alluvial","Kandi","Loamy","Sandy"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": ["Maize","Pulses","Oilseeds","Millets","Agroforestry","Legumes"],
+    "source": "Punjab Diversification Research + AgroSense_Design"
+  },
+  {
+    "id": "CHUNK_28_PestDisease_Prevention_Through Rotation_And SoilCare",
+    "title": "Pest & Disease Prevention via Crop Rotation and Soil-Care Practices",
+    "text": "Long-term studies show mixed cropping and crop rotations reduce pest loads, improve soil nutrient balance and reduce disease incidence compared to continuous monoculture (e.g. rice-wheat). Rotations involving non-host crops break pest/disease cycles and reduce chemical pesticide dependence. Maintaining organic matter (compost/FYM), using balanced fertilization and well-drained soils further reduce disease emergence. [source: Long-term Cropping System & Soil Health Studies]  ",
+    "soil_tags": ["Alluvial","Kandi","Loamy","Sandy"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "Cropping System Research + AgroSense_Design"
+  },
+  {
+    "id": "CHUNK_29_SaltTolerantCrops_And_DroughtResilientOptions",
+    "title": "Salt-Tolerant & Drought-Resilient Crop Options Suitable for Saline or Marginal Soils",
+    "text": "For soils affected by salinity or low fertility / moisture, crops like millets (e.g. pearl millet), drought-tolerant legumes and certain salt-tolerant pulses can be grown. These crops tolerate low fertility, low water, moderate salinity and give reasonable yield under stress. This makes them suitable for degraded, eroded or marginal soils in regions of Punjab. [source: Agronomy research on salt tolerance + AgroSense_Design]  ",
+    "soil_tags": ["Saline-prone","Dryland","Sandy","Kandi"],
+    "season_tags": ["Kharif","Summer"],
+    "crop_tags": ["PearlMillet","Millets","SaltTolerantPulses"],
+    "source": "Global Salt-Tolerance Studies + AgroSense Summary"
+  },
+  {
+    "id": "CHUNK_30_PestDisease_Advisory_General",
+    "title": "General Pest & Disease Advisory for Smallholder Farmers (Punjab Context)",
+    "text": "Smallholder farmers are advised: perform crop rotation, avoid monoculture (rice-wheat every season), maintain soil organic matter via FYM/compost or green manures, ensure proper drainage, avoid water-logging, use balanced fertilization and micronutrients, practice mixed cropping or inter-cropping, inspect crops regularly for pest or disease symptoms, use resistant / tolerant varieties, and rely first on agronomic & cultural methods rather than repeated pesticide use. This integrated approach preserves soil health, reduces salinity / sodicity risk and sustains long-term productivity. [source: National agro-advisory guidelines & integrated pest management research]  ",
+    "soil_tags": ["Alluvial","Kandi","Loamy","Sandy","Saline-prone"],
+    "season_tags": ["Kharif","Rabi","Summer"],
+    "crop_tags": [],
+    "source": "ICAR / CSSRI / AgroSense_Design"
+  },
+  {
+  "id": "CHUNK_31_SaltTolerant_Crops_and_MSP",
+  "title": "Salt-Tolerant Crops/Varieties + MSP (2025) — Punjab / Ropar Context",
+  "text": "List of crop / variety recommendations for saline / marginal soils, along with 2025-26 MSP (or approximate). Includes: CSR 30 Basmati rice, Kharchia 65 wheat, Millets (Bajra / Pearl millet), Maize, Tur (Arhar), Groundnut, coarse millets & pulses for marginal lands. Explanation of suitability and caveats about yield & soil health. Also includes notes on soil/irrigation quality check before cultivation.",
+  "soil_tags": ["Saline-prone","Marginal","Alluvial","Kandi","Sandy","Dryland"],
+  "season_tags": ["Kharif","Rabi","Summer"],
+  "crop_tags": ["Wheat","Basmati","Maize","Millets","Tur","Groundnut","Pulses","Oilseeds"],
+  "source": "ICAR-CSSRI SaltTolerance Data + MSP 2025 Govt Notifications + AgroSense Analysis"
+  },
+  {
+    "id": "RESILIENCE_01_CSR30_Basmati_Rice",
+    "title": "CSR 30 — Salt-Tolerant Basmati Rice",
+    "text": "Variety: CSR 30 (Basmati / salt-tolerant rice). Tolerance: saline / sodic soils (tested under moderate salinity). Suitable soil / water context: moderately saline alluvial soils with some irrigation; avoid heavy water-logging and poor drainage. Typical grain yield on salt-affected soils ~ 2.7–3.5 t/ha under adaptive management. [source: salt-tolerant rice trials, CSSRI annual report].",
+    "soil_tags": ["Alluvial","Floodplain","Saline-prone","Irrigated"],
+    "crop_tags": ["Rice","Basmati","SaltTolerant"],
+    "tolerance": { "salinity": "moderate", "sodicity": "moderate", "water_requirement": "medium" },
+    "yield_range_t_ha": [2.7, 3.5],
+    "notes": "Use good drainage, manage salinity, avoid heavy waterlogging."
+  },
+  {
+    "id": "RESILIENCE_02_Kharchia65_Wheat",
+    "title": "Kharchia 65 — Salt-Tolerant Wheat",
+    "text": "Variety: Kharchia 65 (wheat) — well-known salt-tolerant genotype developed for sodic/saline soils in north-western plains. Suitable for degraded, saline or marginal soils under limited water / saline irrigation. Reported yield under tolerance conditions ~ 1.0–2.0 t/ha (10–20 q/ha), depending on soil/water stress. [source: variety description, Wikipedia].",
+    "soil_tags": ["Alluvial","Saline-prone","Dryland","Irrigated"],
+    "crop_tags": ["Wheat","SaltTolerant"],
+    "tolerance": { "salinity": "moderate-high", "sodicity": "moderate-high", "water_requirement": "low-medium" },
+    "yield_range_t_ha": [1.0, 2.0],
+    "notes": "May have lower yield vs ideal soils; suitable when salinity or sodicity is a constraint."
+  },
+  {
+    "id": "RESILIENCE_03_PearlMillet_Bajra",
+    "title": "Pearl Millet (Bajra) — Drought / Low-Water / Marginal Soil Crop",
+    "text": "Crop: Pearl Millet (Bajra). Stress tolerance: highly drought-tolerant, performs under low rainfall / scanty water / sandy or marginal soils; shows tolerance to salinity stress as well. Suitable for semi-arid, coarse-textured soils, light soils or degraded lands. Typical yield in Punjab marginal soils: ~ 0.8–1.2 t/ha (8–12 q/ha) under low-input rainfed; under better management may go higher. [source: agronomy manuals & Punjab millet reports].",
+    "soil_tags": ["Sandy","Loamy","Dryland","Marginal","Saline-prone"],
+    "crop_tags": ["PearlMillet","Millet","DroughtTolerant"],
+    "tolerance": { "drought": "high", "salinity": "low-medium", "water_requirement": "low" },
+    "yield_range_t_ha": [0.8, 1.2],
+    "notes": "Good option for low-water, low-fertility soils; also useful for fodder / livestock feed."
+  },
+  {
+    "id": "RESILIENCE_04_Sorghum_Jowar",
+    "title": "Sorghum (Jowar) / Forage Sorghum — Drought-Resilient Cereals",
+    "text": "Crop: Sorghum (grain/forage). Stress tolerance: drought-resilient, tolerant of heat and less-fertile soils; performs in semi-arid / arid zones with scanty rainfall. Suitable soils: sandy to loamy, coarse-textured, marginal soils. Yield depends heavily on rainfall/management; typical grain yield range ~ 1.0–2.0 t/ha under moderate conditions; forage yield can be higher under irrigation. [source: drought-resistant crop guides].",
+    "soil_tags": ["Dryland","Sandy","Loamy","Marginal","Degraded"],
+    "crop_tags": ["Sorghum","DroughtTolerant","GrainCereal","Fodder"],
+    "tolerance": { "drought": "high", "salinity": "low-medium", "water_requirement": "low" },
+    "yield_range_t_ha": [1.0, 2.0],
+    "notes": "Dual-use crop (grain + fodder); good fallback under rainfall uncertainty."
+  },
+  {
+    "id": "RESILIENCE_05_FingerMillet_Ragi",
+    "title": "Finger Millet (Ragi) — Drought-Tolerant Millet",
+    "text": "Crop: Finger Millet (Ragi). Stress tolerance: capable of withstanding drought, moderate heat, and relatively poor soils; suitable for semi-arid zones and rain-fed farming. Performs under low to medium water, modest fertility. [source: global millet drought-tolerance studies]. Yield (grain) under modest conditions: ~ 0.6–1.5 t/ha depending on rainfall / soil quality / inputs. Tolerant of marginal soils; lower input demand. ",
+    "soil_tags": ["Dryland","Sandy","Loamy","Marginal"],
+    "crop_tags": ["FingerMillet","Millet","DroughtTolerant"],
+    "tolerance": { "drought": "moderate-high", "water_requirement": "low" },
+    "yield_range_t_ha": [0.6, 1.5],
+    "notes": "Good for dry seasons, marginal soils, low-input farming; nutritious grain and sometimes fodder."
+  },
+  {
+    "id": "RESILIENCE_06_KodoMillet",
+    "title": "Kodo Millet — Hardy Minor Millet for Marginal Lands",
+    "text": "Crop: Kodo Millet (Paspalum scrobiculatum). Stress tolerance: hardy millet tolerant of drought, low fertility, marginal soils; suited to coarse or degraded soils. Suitable for semi-arid, dryland or poor soil conditions. Reported grain yield range under low-input marginal soils: ~ 0.45–0.9 t/ha under minimal water / stress conditions. [source: global millet data].",
+    "soil_tags": ["Dryland","Marginal","Sandy","Loamy","Degraded"],
+    "crop_tags": ["KodoMillet","Millet","DroughtTolerant"],
+    "tolerance": { "drought": "high", "water_requirement": "low" },
+    "yield_range_t_ha": [0.45, 0.9],
+    "notes": "Alternative crop for marginalized soils; low water and input demand; suitable for subsistence or low-cost farming."
+  },
+  {
+    "id": "RESILIENCE_07_Groundnut",
+    "title": "Groundnut (Rainfed / Drought-tolerant Types)",
+    "text": "Crop: Groundnut (peanut), especially drought-tolerant / rainfed types. Stress tolerance: tolerates moderate drought, performs under lower water compared to water-intensive crops; suitable for arid / semi-arid zones with limited moisture. Works on sandy-loamy soils with decent drainage. [source: drought-resistant crop guides]. With good management, yield ~ 1.0–2.5 t/ha (shell yield), depending on moisture & input. Under minimal water stress yield will be lower but steady. ",
+    "soil_tags": ["Sandy","Loamy","Dryland","SemiArid"],
+    "crop_tags": ["Groundnut","Oilseed","DroughtTolerant"],
+    "tolerance": { "drought": "moderate", "water_requirement": "low-medium" },
+    "yield_range_t_ha": [1.0, 2.5],
+    "notes": "Good oilseed + soil-diversification option under water-scarce conditions; helps break cereal monoculture."
+  },
+  {
+    "id": "RESILIENCE_08_Chickpea_Gram",
+    "title": "Chickpea (Gram) / Pulses — Drought-Resilient Legumes",
+    "text": "Crop: Chickpea (Gram) and other pulses. Stress tolerance: legumes generally tolerate lower water, poorer soils; fix atmospheric nitrogen, improving soil fertility — especially useful on degraded or low-fertility soils. Suitable for semi-arid, low-input farming systems. Typical yield under modest conditions: ~ 0.7–1.5 t/ha grain yield, depending on rainfall/soil fertility. ",
+    "soil_tags": ["Dryland","Loamy","Marginal","SemiArid"],
+    "crop_tags": ["Chickpea","Gram","Pulses","DroughtTolerant"],
+    "tolerance": { "drought": "moderate", "water_requirement": "low-medium" },
+    "yield_range_t_ha": [0.7, 1.5],
+    "notes": "Good rotation crop; improves soil nitrogen; low-input and drought-resilient — safe fallback for marginal lands."
+  },
+  {
+    "id": "RESILIENCE_09_PigeonPea_Tur",
+    "title": "Pigeon Pea (Tur / Arhar) — Stress-Resilient Pulse Crop",
+    "text": "Crop: Pigeon Pea (Tur / Arhar). Stress tolerance: more tolerant than many cereals to moisture stress and low fertility; suitable for semi-arid, marginal soils; good for rain-fed or low-water conditions. Works on light to medium soils. Grain yield under modest conditions: ~ 0.8–1.5 t/ha depending on rainfall / moisture availability. Also helps fix nitrogen and improve soil health. ",
+    "soil_tags": ["Dryland","SemiArid","Loamy","Marginal"],
+    "crop_tags": ["PigeonPea","Arhar","Pulses","DroughtTolerant"],
+    "tolerance": { "drought": "moderate", "water_requirement": "low-medium" },
+    "yield_range_t_ha": [0.8, 1.5],
+    "notes": "Good for crop-rotation, soil fertility improvement, and as drought-resilient pulse crop."
+  },
+  {
+    "id": "RESILIENCE_10_MothBean",
+    "title": "Moth Bean — Hardy Legume for Semi-arid / Marginal Lands",
+    "text": "Crop: Moth Bean (Vigna aconitifolia). Stress tolerance: highly drought-resistant, tolerates marginal soils, low rainfall, light soils — well suited for arid / semi-arid zones and degraded soils. Suitable soil: sandy to light loamy, well-drained, low fertility. Grain yield under dry conditions: ~ 0.5–1.0 t/ha (depending on rainfall & management). Adds nitrogen to soil and works as protein crop. [source: drought-resistant legume data].",
+    "soil_tags": ["Dryland","Sandy","Marginal","SemiArid"],
+    "crop_tags": ["MothBean","Pulses","DroughtTolerant"],
+    "tolerance": { "drought": "high", "water_requirement": "low" },
+    "yield_range_t_ha": [0.5, 1.0],
+    "notes": "Good fallback for very marginal soils; improves soil nitrogen; useful for poor / degraded lands."
+  },
+  {
+    "id": "RESILIENCE_11_FoxtailMillet",
+    "title": "Foxtail / Minor Millets — Resilient Under Low-Input / Dry Conditions",
+    "text": "Crop: Foxtail Millet, small millets and other hardy coarse grains. Stress tolerance: adapted to low rainfall, marginal soils, drought and low fertility; suitable for rain-fed farming and less-fertile lands. Grain yield under minimal input in marginal soils: ~ 0.6–1.2 t/ha; under improved management yield can increase. Useful for crop-diversification, food security under unpredictable climate. ",
+    "soil_tags": ["Dryland","Marginal","Sandy","Loamy","Degraded"],
+    "crop_tags": ["Millets","FoxtailMillet","DroughtTolerant"],
+    "tolerance": { "drought": "moderate-high", "water_requirement": "low" },
+    "yield_range_t_ha": [0.6, 1.2],
+    "notes": "Good option for resilient subsistence farming or diversified cropping on degraded lands."
+  },
+  {
+    "id": "RESILIENCE_12_Rainfed_Maize",
+    "title": "Rainfed / Drought-tolerant Maize",
+    "text": "Crop: Maize (drought/less-water tolerant hybrids or rain-fed maize). Stress tolerance: more resilient than paddy under water stress; performs on upland, non-flooded soils. Suitable soils: loamy to light soils, medium fertility, with moderate rainfall or limited irrigation. Grain yield under moderate moisture stress: ~ 2.0–4.0 t/ha (depending on variety & management); fodder or dual-purpose maize suitable for degraded / marginal lands. [source: crop diversification & drought-tolerant crop guidelines].",
+    "soil_tags": ["Loamy","Marginal","SemiArid","Dryland","Upland"],
+    "crop_tags": ["Maize","Cereal","DroughtTolerant"],
+    "tolerance": { "drought": "medium", "water_requirement": "medium-low" },
+    "yield_range_t_ha": [2.0, 4.0],
+    "notes": "Better than paddy under limited water; suitable for crop-diversification and fodder + grain production."
+  },
+  {
+    "id": "RESILIENCE_13_Guar",
+    "title": "Guar — Drought- and Salinity-Tolerant Legume / Fodder / Seed Crop",
+    "text": "Crop: Guar (cluster bean). Stress tolerance: grows on a wide range of soils; tolerant to drought, moderate salinity and low fertility, particularly in sandy and alkaline soils. Suitable for arid / semi-arid, marginal soils with moderate drainage. Works as pulse / fodder / green manure / seed crop. Yield under dryland conditions can vary widely depending on soil & rainfall; moderate yields expected under low input. [source: crop-salinity tolerance data].",
+    "soil_tags": ["Dryland","Sandy","Marginal","SemiArid","Saline-prone"],
+    "crop_tags": ["Guar","Legume","DroughtTolerant","SaltTolerant"],
+    "tolerance": { "drought": "high", "salinity": "low-moderate", "water_requirement": "low" },
+    "yield_range_t_ha": [0.4, 1.0],
+    "notes": "Multi-purpose crop: seed, fodder, soil-improvement; good for degraded or marginal areas."
+  },
+  {
+    "id": "RESILIENCE_14_Castor_Oilseed_AridZones",
+    "title": "Castor — Oilseed for Arid / Semi-arid Marginal Lands",
+    "text": "Crop: Castor (oilseed) suited for arid / semi-arid zones, marginal soils, low-water conditions and coarse soils. Stress tolerance: drought-resistant, low fertility tolerance; works on light soils with proper drainage; suited for rain-fed farming or minimal irrigation. Yield & output variable depending on rainfall / moisture; under favorable conditions oilseed yield can be reasonable, but under stress expect modest yields. [source: drought-area crops guidelines].",
+    "soil_tags": ["Dryland","Sandy","Marginal","SemiArid"],
+    "crop_tags": ["Castor","Oilseed","DroughtTolerant"],
+    "tolerance": { "drought": "high", "water_requirement": "low" },
+    "yield_range_t_ha": [0.5, 1.5],
+    "notes": "Alternate oilseed option under water scarcity; useful for crop-diversification and soil-resilience farming."
+  },
+  {
+    "id": "RESILIENCE_15_Sesame_Oilseed_Dryland",
+    "title": "Sesame (Til) — Oilseed for Dryland / Marginal Soils",
+    "text": "Crop: Sesame (Til) — oilseed suited for dryland / marginal soils, low-input / low-water conditions. Stress tolerance: drought-tolerant, can grow on light to loamy soils, with minimal irrigation and modest fertility. Yield under dryland low-input conditions: ~ 0.4–0.9 t/ha seed yield (depending on rainfall & management). Works well as diversification crop when water is scarce. [source: drought-resistant crop guides].",
+    "soil_tags": ["Dryland","Sandy","Marginal","SemiArid"],
+    "crop_tags": ["Sesame","Oilseed","DroughtTolerant"],
+    "tolerance": { "drought": "high", "water_requirement": "low" },
+    "yield_range_t_ha": [0.4, 0.9],
+    "notes": "Low-input oilseed; good for marginal lands and water-limited farming; adds crop-diversity."
+  }
+]

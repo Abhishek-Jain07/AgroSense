@@ -1,0 +1,8 @@
+streamlit
+google-generativeai
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+python-dotenv
+langdetect       # for basic language detection (optional)
